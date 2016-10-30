@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>hogeのホームページ</title>
+    <!-- Bootstrap Template - Simpla by Binarytheme さんからテンプレート-->
+    <!--REQUIRED STYLE SHEETS-->
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Ruluko' rel='stylesheet' type='text/css' />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./footerFixed.js"></script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.html">hoge homepage</a>
+            </div>
+            <!-- Collect the nav links for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./index.html">HOME</a>
+                    </li>
+                    <li><a href="blog.html">TEXT</a>
+                    </li>
+                    <li><a href="resize.html">RISIZE</a>
+                    </li>
+                    <li><a href="simulate.html">SIMULATER</a>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--End Navigation -->
+
+
+    <section class="for-full-back color-white " id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-2 col-md-2 col-sm-2">
+                  <br>
+                    <h3><目次> </h3>
+                    <div>
+                        <li>
+                            <a href="blog.html">戦闘しみゅについて</a>
+                        </li>
+                        <li>
+                            <a href="howto.html">戦闘しみゅ使い方</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-md-10 col-sm-10">
+                    <h1>戦闘しみゅについて</h1>
+                    <p>クトゥルフTRPGの戦闘は卓によって細かいルールは異なると思います。 そのため、本記事では、しみゅでのデフォルトの実装仕様について説明したいと思います。今後の更新で、こういったルールを追加してほしい！こんなバグがあったぞ！等ございましたら。<a href="contact.html">contact</a>より、ご一報くだされば幸いです。
+                    </p>
+                    <ul>
+                        <li>スペシャル、クリティカル、ファンブルの戦闘時の不採用。<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>卓のハウスルールによってまちまちであるため、現在は実装されていません。</span></span></span></div></pre></li>
+                    </ul>
+                    <ul>
+                        <li>応急手当、医学の戦闘時の扱いを同じに</li>
+                        <li>モンスターの攻撃対象は生存探索者（気絶含む）をランダム選択</li>
+                        <li>探索者の攻撃対象は、番号の若いモンスターから。</li>
+                        <li>応医は対象探索者が受けた攻撃の回数だけ挑戦可能</li>
+                        <li>組み合わせロール時、マーシャルアーツのみ成功の場合攻撃は失敗。攻撃ロールが成功の場合はその攻撃ロールでのダメージ。</li>
+                        <li>探索者の残り耐久力が2以下の場合自動気絶</li>
+                        <li>自動気絶の時に応医で耐久力3以上まで回復すれば行動可能。</li>
+                        <li>探索者が現在の体力の半分以上を失った場合CONx5のショックロールに耐えられなければ気絶</li>
+                        <li>探索者の耐久力が0になった場合、次Rまでに1以上にならなければ死亡</li>
+                        <li>探索者の攻撃手段のダメージは以下のとおり</li>
+                    </ul>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>パンチ</th>
+                            <th>キック</th>
+                            <th>頭突き</th>
+                            <th>MA+パンチ</th>
+                            <th>MA+キック</th>
+                            <th>MA+頭突き</th>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align:left">1d3+db</td>
+                            <td style="text-align:left">1d6+db</td>
+                            <td style="text-align:left">1d4+db</td>
+                            <td style="text-align:left">2d3+db</td>
+                            <td>2d6+db</td>
+                            <td>2d4+db</td>
+                        </tr>
+
+
+                    </table>
+                    <ul>
+                        <li>モンスターのステータスは基本ルールブックの平均値から引用</li>
+                        <li>DEX順でモンスターと同じだった場合探索者が先に行動</li>
+                        <li>回避に挑戦できるのは各探索者、モンスターともに1Rにつき一回まで</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer Section -->
+    <div class="for-full-back " id="footer">
+        2016 hoge | All Right Reserved
+
+    </div>
+    <!--End footer Section -->
+
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="assets/plugins/bootstrap.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

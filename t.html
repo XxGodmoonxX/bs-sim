@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <![endif]-->
+  <title>クトゥルフ戦闘しみゅ</title>
+  <!-- グラフ表示のためのライブラリ -->
+  <link href="./build/nv.d3.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+  <script src="./build/nv.d3.js"></script>
+  <script src="lib/stream_layers.js"></script>
+  <!-- Bootstrap Template - Simpla by Binarytheme さんからテンプレート-->
+  <!--REQUIRED STYLE SHEETS-->
+  <!-- BOOTSTRAP CORE STYLE CSS -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- FONTAWESOME STYLE CSS -->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- CUSTOM STYLE CSS -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- GOOGLE FONT -->
+  <link href='http://fonts.googleapis.com/css?family=Ruluko' rel='stylesheet' type='text/css' />
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="jquery-3.1.1.min.js"></script>
+  <script src="jquery.xdomainajax.js"></script>
+  <!--End footer Section -->
+
+  <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+  <!-- CORE JQUERY  -->
+  <script src="assets/plugins/jquery-1.10.2.js"></script>
+  <!-- BOOTSTRAP CORE SCRIPT   -->
+  <script src="assets/plugins/bootstrap.js"></script>
+  <!-- CUSTOM SCRIPTS -->
+  <script src="assets/js/custom.js"></script>
+  <!-- COOKIE -->
+  <script src="./jquery-cookie-master/src/jquery.cookie.js"></script>
+  <!-- MY SCRIPTS -->
+  <script src="./test.js"></script>
+  <!--ajaxのテスト-->
+  <script src="./ajax_test.js"></script>
+  <!--便利な関数群-->
+  <script src="./function.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+<form>
+  <div class="form-group">
+    <label>キャラクター保管所URL</label>
+    <input type="text" id="url" class="form-control" placeholder="http://charasheet.vampire-blood.net/">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="isDetail">内訳表示
+    </label>
+  </div>
+  <button type="button" id="getbtn" class="btn btn-default btn-lg btn-primary">取得</button>
+  <br><br><br>
+  <div id="pallet_div" style="display:none;">
+    <h4>メモ</h4>
+    <div class="well" id="pallet"></div>
+    <button type="button" id="clipbtn" class="btn btn-default btn-lg btn-info" data-clipboard-target="pallet">クリップボードにコピー</button>
+  </div>
+</form>
+</div>
+<form>
+<p>職P:<input type="range" name="ex1" min="0" max="420" onChange="changeValueJ(this.value)"></p>
+<span id="val">210</span>
+<script type = "text/javascript">
+function changeValueJ(value){
+  document.getElementById("val").innerHTML = value;
+}
+</script>
+
+<p>
+  趣P:<input type="range" name="ex2" min="0" max="180" onChange="changeValueH(this.value)">
+</p>
+<span id="val2">90</span>
+<script type = "text/javascript">
+function changeValueH(value){
+  document.getElementById("val2").innerHTML = value;
+}
+</script>
+</form>
+
+
+</body>
