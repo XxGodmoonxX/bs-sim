@@ -1,2 +1,3 @@
 # bs-sim
-begin
+webデザインとマネジメント
+チーム　TRPGってなんだ
