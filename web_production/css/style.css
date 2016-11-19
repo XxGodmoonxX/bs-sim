@@ -1,0 +1,44 @@
+.topmenu {
+  background-color: skyblue;
+  height: 80px;
+}
+
+.title {
+  float: left;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 40px;
+}
+
+.topmenu-frame {
+  float: right;
+  width: 30%;
+}
+
+.topmenu-wrapper {
+  float: left;
+  font-size: 30px;
+  margin: 8% 3% 0;
+  padding-top: 2%;
+}
+
+.menu-wrapper {
+  text-align: center;
+  width: 60%;
+  margin: 10% 20%;
+}
+
+.mainmenu {
+  float: left;
+  margin: 6%;
+  width: 20%;
+}
+
+.mainmenu p {
+  font-size: 40px;
+}
+
+.color-blue {
+  font-size: 80px;
+  color: skyblue;
+}
