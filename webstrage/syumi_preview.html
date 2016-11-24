@@ -13,10 +13,9 @@
     <div class="page">
         <header>
             <div id="title">
-                <h1>職業技能選択ページ</h1>
+                <h1>趣味技能ページ</h1>
             </div>
             <script type="text/javascript">
-
             </script>
 
         </header>
@@ -27,16 +26,141 @@
 			<button id="button" onclick="removeStorage()">削除</button>
 			<button id="button" onclick="removeallStorage()">全て削除</button> -->
         </section>
-
-        <a>職業名を入力してください</a>
-        <input type="text" id="job">
         <a href="./practice.html">practiceへのリンク</a>
 
+        <!-- 折り畳み展開ポインタ -->
+        <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+            <a style="cursor:pointer;">▼ 戦闘技能</a>
+        </div>
+        <!--// 折り畳み展開ポインタ -->
 
-        <button id="show" onclick="job_skill_show()">職業技能表示</button>
+        <!-- 折り畳まれ部分 -->
+        <div id="open" style="display:none;clear:both;">
+            回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> キック
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 組み付き
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> こぶし(パンチ)
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br> 回避
+            <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+
+
+        </div>
+        <!--// 折り畳まれ部分 -->
+
+
+        <!-- 折り畳み展開ポインタ -->
+        <div onclick="obj=document.getElementById('open2').style; obj.display=(obj.display=='none')?'block':'none';">
+            <a style="cursor:pointer;">▼ 探索技能</a>
+        </div>
+        <!--// 折り畳み展開ポインタ -->
+
+        <!-- 折り畳まれ部分 -->
+        <div id="open2" style="display:none;clear:both;">
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+          回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+
+        </div>
+        <!--// 折り畳まれ部分 -->
+
+        <!-- 折り畳み展開ポインタ -->
+<div onclick="obj=document.getElementById('open3').style; obj.display=(obj.display=='none')?'block':'none';">
+<a style="cursor:pointer;">▼ 行動技能</a>
+</div>
+<!--// 折り畳み展開ポインタ -->
+
+<!-- 折り畳まれ部分 -->
+<div id="open3" style="display:none;clear:both;">
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+
+
+</div>
+<!--// 折り畳まれ部分 -->
+
+<!-- 折り畳み展開ポインタ -->
+<div onclick="obj=document.getElementById('open4').style; obj.display=(obj.display=='none')?'block':'none';">
+<a style="cursor:pointer;">▼ 交渉技能</a>
+</div>
+<!--// 折り畳み展開ポインタ -->
+
+<!-- 折り畳まれ部分 -->
+<div id="open4" style="display:none;clear:both;">
+
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+
+
+
+</div>
+<!--// 折り畳まれ部分 -->
+
+<!-- 折り畳み展開ポインタ -->
+<div onclick="obj=document.getElementById('open5').style; obj.display=(obj.display=='none')?'block':'none';">
+<a style="cursor:pointer;">▼ 知識技能</a>
+</div>
+<!--// 折り畳み展開ポインタ -->
+
+<!-- 折り畳まれ部分 -->
+<div id="open5" style="display:none;clear:both;">
+
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+  回避 <input type="range" name="num" id="slide' + val + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeValue(this.value,' + val + ')"> <span id="' + val + '">shoki</span><br>
+
+
+</div>
+<!--// 折り畳まれ部分 -->
         <footer>
         </footer>
     </div>
+
+
     <div id="preview">
 
     </div>
