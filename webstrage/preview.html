@@ -6,6 +6,7 @@
     <title>LocalStorage Sample</title>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="preview.js"></script>
+    <script src="hash.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 </head>
 
@@ -16,7 +17,6 @@
                 <h1>職業技能選択ページ</h1>
             </div>
             <script type="text/javascript">
-
             </script>
 
         </header>
@@ -29,17 +29,21 @@
         </section>
 
         <a>職業名を入力してください</a>
-        <input type="text" id="job">
+        <input type="text" id="job"></input>
         <a href="./practice.html">practiceへのリンク</a>
 
 
         <button id="show" onclick="job_skill_show()">職業技能表示</button>
+        <button id="hobby_show" onclick="hobby_show()">趣味技能表示</button>
         <footer>
         </footer>
     </div>
     <div id="preview">
 
     </div>
+
+
+    <div id="side"></div>
 </body>
 
 </html>

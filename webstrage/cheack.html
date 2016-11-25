@@ -1,99 +1,102 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>LocalStorage Sample</title>
 </head>
+
 <body onload="viewStorage();">
     <div class="page">
         <header>
             <div id="title">
                 <h1>職業技能確認ページ</h1>
             </div>
-<script type="text/javascript">
-// ①Web Storageの実装確認
-if (typeof localStorage === 'undefined') {
-		window.alert("このブラウザはWeb Storage機能が実装されていません");
-}else{
-		//window.alert("このブラウザはWeb Storage機能を実装しています");
+            <script type="text/javascript">
+                // ①Web Storageの実装確認
+                if (typeof localStorage === 'undefined') {
+                    window.alert("このブラウザはWeb Storage機能が実装されていません");
+                } else {
+                    //window.alert("このブラウザはWeb Storage機能を実装しています");
 
-	var storage = localStorage;
+                    var storage = localStorage;
 
-	// ③localStorageへの格納
-	function setlocalStorage() {
-		var key = document.getElementById("textkey").value;
-		var value = document.getElementById("textdata").value;
+                    // ③localStorageへの格納
+                    function setlocalStorage() {
+                        var key = document.getElementById("textkey").value;
+                        var value = document.getElementById("textdata").value;
 
-		// 値の入力チェック
-		if (key && value) {
-			storage.setItem(key, value);
-		}
+                        // 値の入力チェック
+                        if (key && value) {
+                            storage.setItem(key, value);
+                        }
 
-		// 変数の初期化
-		key = "";
-		value = "";
+                        // 変数の初期化
+                        key = "";
+                        value = "";
 
-		viewStorage();
-	}
+                        viewStorage();
+                    }
 
-	// ③localStorageからのデータの取得と表示
-	function viewStorage() {
-		// localStorageすべての情報の取得
-		for (var i=0; i < storage.length; i++) {
-			var _key = storage.key(i);
+                    // ③localStorageからのデータの取得と表示
+                    function viewStorage() {
+                        // localStorageすべての情報の取得
+                        for (var i = 0; i < storage.length; i++) {
+                            var _key = storage.key(i);
 
-			// localStorageのキーと値を表示
-			var tr = document.createElement("tr");
-			var td1 = document.createElement("td");
-			var td2 = document.createElement("td");
-			list.appendChild(tr);
-			tr.appendChild(td1);
-			tr.appendChild(td2);
-			td1.innerHTML = _key;
-			td2.innerHTML = storage.getItem(_key);
-		}
-	}
+                            // localStorageのキーと値を表示
+                            var tr = document.createElement("tr");
+                            var td1 = document.createElement("td");
+                            var td2 = document.createElement("td");
+                            list.appendChild(tr);
+                            tr.appendChild(td1);
+                            tr.appendChild(td2);
+                            td1.innerHTML = _key;
+                            td2.innerHTML = storage.getItem(_key);
+                        }
+                    }
 
-	// ④localStorageから削除
-	function removeStorage() {
-		var key = document.getElementById("textkey").value;
+                    // ④localStorageから削除
+                    function removeStorage() {
+                        var key = document.getElementById("textkey").value;
 
-		storage.removeItem(key);
+                        storage.removeItem(key);
 
-		// 変数の初期化
-		key = "";
+                        // 変数の初期化
+                        key = "";
 
-		viewStorage();
-	}
+                        viewStorage();
+                    }
 
-	// ⑤localStorageからすべて削除
-	function removeallStorage() {
-		storage.clear();
-		viewStorage();
-	}
+                    // ⑤localStorageからすべて削除
+                    function removeallStorage() {
+                        storage.clear();
+                        viewStorage();
+                    }
 
-}
-</script>
+                }
+            </script>
 
         </header>
         <section id="main">
-			保存するKey：<input id="textkey" type="text" />
-			保存する値：<input id="textdata" type="text" />
-			<button id="button" onclick="setlocalStorage()">保存</button>
-			<button id="button" onclick="removeStorage()">削除</button>
-			<button id="button" onclick="removeallStorage()">全て削除</button>
-		<table border="1">
-			<tr>
-				<th>キー</th><th>値</th>
-			</tr>
-			<tbody id="list">
-        <a href="./practice.html">リンク</a>
-			</tbody>
-		</table>
+            保存するKey：<input id="textkey" type="text" /> 保存する値：
+            <input id="textdata" type="text" />
+            <button id="button" onclick="setlocalStorage()">保存</button>
+            <button id="button" onclick="removeStorage()">削除</button>
+            <button id="button" onclick="removeallStorage()">全て削除</button>
+            <table border="1">
+                <tr>
+                    <th>キー</th>
+                    <th>値</th>
+                </tr>
+                <tbody id="list">
+                    <a href="./practice.html">リンク</a>
+                </tbody>
+            </table>
         </section>
         <footer>
         </footer>
     </div>
 </body>
+
 </html>
