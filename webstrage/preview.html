@@ -5,8 +5,13 @@
     <meta charset="utf-8" />
     <title>LocalStorage Sample</title>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <link href="./novus-nvd3-153163a/build/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="./novus-nvd3-153163a/build/nv.d3.js"></script>
+
     <script src="preview.js"></script>
     <script src="hash.js"></script>
+    <script src="make_str.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 </head>
 
@@ -28,6 +33,11 @@
 			<button id="button" onclick="removeallStorage()">全て削除</button> -->
         </section>
 
+        <a>ダイスを振る</a>
+        <button id="dice" onclick="dice_roll()">ダイスを一括ぶり</button>
+        <div id="chart1">
+    <svg></svg>
+</div>
         <a>職業名を入力してください</a>
         <input type="text" id="job"></input>
         <a href="./practice.html">practiceへのリンク</a>
