@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>LocalStorage Sample</title>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <link href="./novus-nvd3-153163a/build/nv.d3.css" rel="stylesheet" type="text/css">
+    <link href="./novus-nvd3-153163a/build/nv.d3.css" rel="stylesheet" type="text/css"></link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
     <script src="./novus-nvd3-153163a/build/nv.d3.js"></script>
 
@@ -33,27 +33,24 @@
 			<button id="button" onclick="removeallStorage()">全て削除</button> -->
         </section>
 
-        <a>ダイスを振る</a>
+        <!-- <div id="dice_message"><a>ダイスを振る</a></div> -->
         <button id="dice" onclick="dice_roll()">ダイスを一括ぶり</button>
         <div id="chart1">
-    <svg></svg>
-</div>
-        <a>職業名を入力してください</a>
-        <input type="text" id="job"></input>
-        <a href="./practice.html">practiceへのリンク</a>
+            <svg></svg>
+        </div>
+        <div id=job_preview></div>
 
-
-        <button id="show" onclick="job_skill_show()">職業技能表示</button>
-        <button id="hobby_show" onclick="hobby_show()">趣味技能表示</button>
-        <footer>
-        </footer>
     </div>
     <div id="preview">
 
     </div>
-
+    <div id="preview2"></div>
 
     <div id="side"></div>
+
+    <div id = "memo"></div>
+
+    <div id="pallet"></div>
 </body>
 
 </html>
