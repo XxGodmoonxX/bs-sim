@@ -331,7 +331,7 @@ if (typeof localStorage === 'undefined') {
 
         str += "<br>"
 
-        str += "職業技能P" + ' <input type="range" disabled id = "J_slide" min="0" max="400" step="1" value=' + shoki_shoku_p + '> <span id="job_P">' + shoki_shoku_p + '</span>' + '<br>';
+        str += "残り職業技能P" + ' <input type="range" disabled id = "J_slide" min="0" max="400" step="1" value=' + shoki_shoku_p + '> <span id="job_P">' + shoki_shoku_p + '</span>' + '<br>';
         document.getElementById("preview").innerHTML = str;
 
 
