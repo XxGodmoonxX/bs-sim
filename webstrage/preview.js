@@ -251,7 +251,7 @@ if (typeof localStorage === 'undefined') {
             }
 
             //出力ボタンを出す。
-            var str = '<input type="button" value="趣味技能入力完了" onclick="syumirec()">';
+            var str = '<input type="button" class= "sample" value="趣味技能入力完了" onclick="syumirec()">';
             document.getElementById("memo").innerHTML = str;
             document.getElementById("preview").innerHTML = "";
 
@@ -270,7 +270,7 @@ if (typeof localStorage === 'undefined') {
       var str="";
 
       str+='<a>職業名を入力してください</a><input type="text" id="job"></input><a href="./practice.html">practiceへのリンク</a>';
-      str+='<button id="show" onclick="job_skill_show()">技能表示</button><button id="hobby_show" onclick="prorec()">職業技能割り振り完了</button>'
+      str+='<button id="show" class ="sample" onclick="job_skill_show()">技能表示</button><button id="hobby_show" class="sample"onclick="prorec()">職業技能割り振り完了</button>'
 
       _delete_element('dice');
     //  _delete_element('dice_message');

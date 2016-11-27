@@ -101,7 +101,7 @@ function syumirec() {
           _delete_element('slide'+i);
         }
         //出力ボタンを出す。
-        var str = '<input type="button" value="出力" onclick="create_memo()">';
+        var str = '<input type="button" class = "sample"value="出力" onclick="create_memo()">';
         document.getElementById("memo").innerHTML = str;
     }
 }
