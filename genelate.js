@@ -338,7 +338,7 @@ if (typeof localStorage === 'undefined') {
 
 
         //趣味技能を出す
-        HTML_Load('preview.html', 'top');
+        HTML_Load('genelate.html', 'top');
         HTML_Load('./side.html', 'side');
 
         str = "";
