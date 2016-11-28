@@ -486,7 +486,7 @@ function create_memo() {
     var name = '名前';
     var sex = '';
     var job = document.getElementById("job").value;
-    var age = '歳';
+    var age = '';
 
     if (STR + SIZ <= 12) {
         DB = '-1D6';
@@ -545,6 +545,7 @@ function create_memo() {
             str += "<br>[趣味技能]<br>";
             var chk = [];
             var cnt = 0;
+            var t=0;
             for (var i = 0; i < syumi_huri.length; i++) {
                 if (syumi_huri[i] > 0) {
                     var num = syumi_skill_id[i];
@@ -560,8 +561,9 @@ function create_memo() {
                     chk.push(num);
 
                 }
-                if (cnt != 0 && cnt % 3 == 0) {
+                if (cnt != 0 && cnt % 3 == 0 && t<4) {
                     str += "<br>";
+                    t++;
                 }
             }
         }
