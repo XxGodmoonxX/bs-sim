@@ -229,6 +229,7 @@ if (typeof localStorage === 'undefined') {
         document.getElementById('free_var').innerHTML = ' <input type="range" name="num" id = "slide' + idx + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeproValue(this.value,' + idx + ')"> <span id="' +
             idx + '">' + shoki + '</span>' + '<br>';
     }
+
     function _delete_element(id_name) {
         var dom_obj = document.getElementById(id_name);
         var dom_obj_parent = dom_obj.parentNode;
@@ -248,7 +249,7 @@ if (typeof localStorage === 'undefined') {
             }
             for (var i = 0; i < pro_huri.length; i++) {
                 //console.log(pro_huri[i]);
-                var x = Number(pro_skill_id[i])-100;
+                var x = Number(pro_skill_id[i]) - 100;
                 //hash2[x]=pro_huri[i];
             }
 
@@ -268,17 +269,17 @@ if (typeof localStorage === 'undefined') {
 
     }
     //職業入力欄を出す
-    function show_job(){
-      var str="";
+    function show_job() {
+        var str = "";
 
-    str+='<a></a><input type="text" placeholder= "職業名"id="job">';
-      str+='<button id="show" class ="sample" onclick="job_skill_show()">技能表示</button><button id="hobby_show" class="sample"onclick="prorec()">職業技能入力完了</button>'
+        str += '<a></a><input type="text" placeholder= "職業名"id="job">';
+        str += '<button id="show" class ="sample" onclick="job_skill_show()">技能表示</button><button id="hobby_show" class="sample"onclick="prorec()">職業技能入力完了</button>'
 
-      _delete_element('dice');
-    //  _delete_element('dice_message');
+        _delete_element('dice');
+        //  _delete_element('dice_message');
 
 
-      document.getElementById("job_preview").innerHTML=str;
+        document.getElementById("job_preview").innerHTML = str;
 
     }
 
@@ -371,6 +372,7 @@ if (typeof localStorage === 'undefined') {
     }
 
 }
+
 function dice_roll() {
     //3~18
     STR = Math.floor(Math.random() * 15) + 3;
@@ -455,7 +457,7 @@ function syumirec() {
         for (var i = 0; i < syumi_skill_id.length; i++) {
             var x = document.getElementById(syumi_skill_id[i]).innerHTML;
             //yは趣味技能の初期値
-          //  var y = hash2[syumi_skill_id[i]];
+            //  var y = hash2[syumi_skill_id[i]];
             //yは職業技能を降った時点でのそれぞれの技能値に hash2の初期値を更新すれば良い？　prorec()時にhash2の書き換え
             var y = hash2[syumi_skill_id[i]];
             if (x > y) {
@@ -470,8 +472,8 @@ function syumirec() {
 
         }
         _delete_element('preview2');
-        for(var i=0;i<60;i++){
-          _delete_element('slide'+i);
+        for (var i = 0; i < 60; i++) {
+            _delete_element('slide' + i);
         }
         //出力ボタンを出す。
         var str = '<input type="button" class = "sample"value="出力" onclick="create_memo()">';
@@ -481,10 +483,22 @@ function syumirec() {
 
 function create_memo() {
 
-    var name = 'tarou';
-    var sex = '男';
+    var name = '名前';
+    var sex = '';
     var job = document.getElementById("job").value;
-    var age = '33';
+    var age = '歳';
+
+    if (STR + SIZ <= 12) {
+        DB = '-1D6';
+    } else if(STR + SIZ <= 16) {
+        DB = '-1D4';
+    } else if(STR + SIZ <= 24) {
+        DB = 'なし';
+    } else if(STR + SIZ <= 32) {
+        DB = '+1D4';
+    } else if(STR + SIZ <= 40) {
+        DB = '+1D6';
+    }
 
 
     val["JOBP"] = EDU * 20;
@@ -530,18 +544,18 @@ function create_memo() {
         } else if (j == 4) {
             str += "<br>[趣味技能]<br>";
             var chk = [];
-            var cnt=0;
+            var cnt = 0;
             for (var i = 0; i < syumi_huri.length; i++) {
                 if (syumi_huri[i] > 0) {
                     var num = syumi_skill_id[i];
-                    var flag=true;
+                    var flag = true;
                     //既に出力したものであるかをチェック
                     for (var k = 0; k < chk.length; k++) {
-                        if (chk[k] == num) flag=false;
+                        if (chk[k] == num) flag = false;
                     }
-                    if(flag==true){
-                      str += hash3[num] + ':' + document.getElementById(num).innerHTML + '%(' + hash2[num] + '+' + syumi_huri[i] + ')　';
-                      cnt++;
+                    if (flag == true) {
+                        str += hash3[num] + ':' + document.getElementById(num).innerHTML + '%(' + hash2[num] + '+' + syumi_huri[i] + ')　';
+                        cnt++;
                     }
                     chk.push(num);
 
