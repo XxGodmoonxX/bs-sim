@@ -235,7 +235,7 @@ if (typeof localStorage === 'undefined') {
         dom_obj_parent.removeChild(dom_obj);
     }
 
-    //職業技能のランを保存する
+    //職業技能の入力情報を保存する
     function prorec() {
         if (document.getElementById("job_P").innerHTML > 0) {
             alert("まだ割り振れる職業技能ポイントがのこっています。");
@@ -248,6 +248,8 @@ if (typeof localStorage === 'undefined') {
             }
             for (var i = 0; i < pro_huri.length; i++) {
                 //console.log(pro_huri[i]);
+                var x = Number(pro_skill_id[i])-100;
+                hash2[x]=pro_huri[i];
             }
 
             //出力ボタンを出す。
@@ -453,9 +455,9 @@ function syumirec() {
         for (var i = 0; i < syumi_skill_id.length; i++) {
             var x = document.getElementById(syumi_skill_id[i]).innerHTML;
             //yは趣味技能の初期値
+          //  var y = hash2[syumi_skill_id[i]];
+            //yは職業技能を降った時点でのそれぞれの技能値に hash2の初期値を更新すれば良い？　prorec()時にhash2の書き換え
             var y = hash2[syumi_skill_id[i]];
-            //console.log(y);
-
             if (x > y) {
                 //  console.log(y);
                 syumi_huri.push(x - y);
