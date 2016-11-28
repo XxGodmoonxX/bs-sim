@@ -249,7 +249,7 @@ if (typeof localStorage === 'undefined') {
             for (var i = 0; i < pro_huri.length; i++) {
                 //console.log(pro_huri[i]);
                 var x = Number(pro_skill_id[i])-100;
-                hash2[x]=pro_huri[i];
+                //hash2[x]=pro_huri[i];
             }
 
             //出力ボタンを出す。
