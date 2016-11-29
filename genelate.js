@@ -226,8 +226,7 @@ if (typeof localStorage === 'undefined') {
         }
         idx += 100;
         pro_skill_id.push(idx);
-        document.getElementById('free_var').innerHTML = ' <input type="range" name="num" id = "slide' + idx + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeproValue(this.value,' + idx + ')"> <span id="' +
-            idx + '">' + shoki + '</span>' + '<br>';
+        document.getElementById('free_var').innerHTML = '<b><span id="' + idx + '">' + shoki + '</span></b>'+' <input type="range" name="num" id = "slide' + idx + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeproValue(this.value,' + idx + ')">' + '<br>';
     }
 
     function _delete_element(id_name) {
@@ -325,8 +324,7 @@ if (typeof localStorage === 'undefined') {
 
                 idx += 100;
                 pro_skill_id.push(idx);
-                str += s[i] + ' <input type="range" name="num" id = "slide' + idx + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeproValue(this.value,' + idx + ')"> <span id="' + idx + '">' + shoki +
-                    '</span>' + '<br>';
+                str += '<b>'+s[i] + ' <span id="' + idx + '">' + shoki + '</span></b>'+'<input type="range" name="num" id = "slide' + idx + '" min=' + shoki + ' max="100" step="1" value=' + shoki + ' onchange="changeproValue(this.value,' + idx + ')"> ' + '<br>';
 
             }
 
@@ -334,7 +332,7 @@ if (typeof localStorage === 'undefined') {
 
         str += "<br>"
 
-        str += "残り職業技能P" + ' <input type="range" disabled id = "J_slide" min="0" max="400" step="1" value=' + shoki_shoku_p + '> <span id="job_P">' + shoki_shoku_p + '</span>' + '<br>';
+        str += "<b>残り職業技能P" + ' <span id="job_P">' + shoki_shoku_p + '</span></b>' + '<input type="range" disabled id = "J_slide" min="0" max="400" step="1" value=' + shoki_shoku_p + '>' +'<br>';
         document.getElementById("preview").innerHTML = str;
 
 
@@ -344,7 +342,7 @@ if (typeof localStorage === 'undefined') {
 
         str = "";
 
-        str = "趣味技能P" + '<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '> <span id="syumi_P">' + shoki_syumi_p + '</span>' + '<br>';
+        str = "<b>残り趣味技能P" +  ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' +'<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>'+ '<br>';
         document.getElementById("preview2").innerHTML = str;
 
     }
