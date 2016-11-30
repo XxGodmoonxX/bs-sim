@@ -249,8 +249,10 @@ if (typeof localStorage === 'undefined') {
             for (var i = 0; i < pro_huri.length; i++) {
                 //console.log(pro_huri[i]);
                 var x = Number(pro_skill_id[i]) - 100;
-                //hash2[x]=pro_huri[i];
+                Althash2[x]=pro_huri[i]+hash2[x];
             }
+
+
 
             //出力ボタンを出す。
             var str = '<input type="button" class= "sample" value="趣味技能入力完了" onclick="syumirec()">';
@@ -272,7 +274,7 @@ if (typeof localStorage === 'undefined') {
         var str = "";
 
         str += '<a></a><input type="text" placeholder= "職業名"id="job">';
-        str += '<button id="show" class ="sample" onclick="job_skill_show()">技能表示</button><button id="hobby_show" class="sample"onclick="prorec()">職業技能入力完了</button>'
+        str += '<button id="show" class ="sample" onclick="job_skill_show()">技能表示</button>';
 
         _delete_element('dice');
         //  _delete_element('dice_message');
@@ -333,6 +335,7 @@ if (typeof localStorage === 'undefined') {
         str += "<br>"
 
         str += "<b>残り職業技能P" + ' <span id="job_P">' + shoki_shoku_p + '</span></b>' + '<input type="range" disabled id = "J_slide" min="0" max="400" step="1" value=' + shoki_shoku_p + '>' +'<br>';
+        str+='<button id="hobby_show" class="sample"onclick="prorec()">職業技能入力完了</button>'
         document.getElementById("preview").innerHTML = str;
 
 
@@ -342,7 +345,11 @@ if (typeof localStorage === 'undefined') {
 
         str = "";
 
-        str = "<b>残り趣味技能P" +  ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' +'<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>'+ '<br>';
+
+
+        str += "<b>残り趣味技能P" +  ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' +'<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>'+ '<br>';
+        str += "<b>回避</b>"+'<span id="0">'+DEX*2+'</span><br>'+'<input type="range" name="num" id="slide0" min="'+DEX*2+'" max = "100" step="1" value="'+DEX*2+'"onchange="changeValue(this.value,0)"><br>';
+        str += "<b>母国語</b>"+'<span id="39">'+EDU*5+'</span><br>'+'<input type="range" name="num" id="slide39" min="'+EDU*5+'" max = "100" step="1" value="'+EDU*5+'"onchange="changeValue(this.value,39)"><br>';
         document.getElementById("preview2").innerHTML = str;
 
     }
@@ -390,7 +397,12 @@ function dice_roll() {
     SYO = EDU * 20;
     SYU = INT * 10;
 
-    //dbはあと
+    hash2[0]=DEX*2;
+    Althash2[0]=DEX*2;
+
+    Althash2[39]=EDU*5;
+    hash2[39]=EDU*5;
+
 
     historicalBarChart = [{
         key: "Cumulative Return",
@@ -452,16 +464,16 @@ function syumirec() {
         alert("まだ割り振れる趣味技能ポイントがのこっています。");
     } else {
         syumi_huri.length = 0;
-        for (var i = 0; i < syumi_skill_id.length; i++) {
-            var x = document.getElementById(syumi_skill_id[i]).innerHTML;
+        for (var i = 0; i < 60; i++) {
+            var x = document.getElementById(i).innerHTML;
             //yは趣味技能の初期値
             //  var y = hash2[syumi_skill_id[i]];
             //yは職業技能を降った時点でのそれぞれの技能値に hash2の初期値を更新すれば良い？　prorec()時にhash2の書き換え
-            var y = hash2[syumi_skill_id[i]];
+            var y = Althash2[i];
             if (x > y) {
                 //  console.log(y);
                 syumi_huri.push(x - y);
-                syumi_skill_memo.push(hash3[syumi_skill_id[i]]);
+                syumi_skill_memo.push(hash3[i]);
             }
         }
         for (var i = 0; i < syumi_huri.length; i++) {
@@ -469,10 +481,11 @@ function syumirec() {
             console.log(syumi_skill_memo[i]);
 
         }
-        _delete_element('preview2');
         for (var i = 0; i < 60; i++) {
             _delete_element('slide' + i);
         }
+        //_delete_element('preview2');
+
         //出力ボタンを出す。
         var str = '<input type="button" class = "sample"value="出力" onclick="create_memo()">';
         document.getElementById("memo").innerHTML = str;
