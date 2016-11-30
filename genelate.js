@@ -259,9 +259,6 @@ if (typeof localStorage === 'undefined') {
                 console.log(syumi_huri[i]);
                 console.log(syumi_skill_id[i]);
                 console.log(syumi_skill_memo[i]);
-
-
-
             }
             for (var i = 0; i < 60; i++) {
                 _delete_element('slide' + i);
@@ -300,9 +297,6 @@ if (typeof localStorage === 'undefined') {
 
             _delete_element('hobby_show');
             _delete_element('show');
-
-
-
 
         }
 

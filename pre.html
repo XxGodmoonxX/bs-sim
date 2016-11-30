@@ -41,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./index.html">hoge homepage</a>
+                <a class="navbar-brand" href="./index.html">クトゥルフwebツール</a>
             </div>
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -52,9 +52,7 @@
                     </li>
                     <li><a href="resize.html">RISIZE</a>
                     </li>
-                    <li><a href="simulate.html">SIMULATER</a>
-                    </li>
-                    <li><a href="genelate.html">GENERATER</a>
+                    <li><a href="genelate.html">GENERATOR</a>
                     </li>
                     <li><a href="contact.html">CONTACT</a>
                     </li>
@@ -80,9 +78,12 @@
             <div class="row">
                 <div class="col-md-10 contact-cls">
                     <h3>説明 </h3>
-                    <b>ルールブックを参照してキー値に職業名</b>
-                    <b>値に技能名を登録してください</b>
-
+                    <b>ルールブックを参照</b>してキー値に職業名</b>
+                    <p>値に技能名を登録してください</p><br>
+                    <p>職業自由選択技能は'趣味'と入力です。</p>
+                    <p>区切り文字は','を使用してください</p><br>
+                    <p>入力したデータはブラウザに保存されます</p>
+                    <h4>例: 拳法家　こぶし（パンチ）,キック,マーシャルアーツ,趣味,趣味</h4>
                 </div>
                 <div class="col-md-12">
 
@@ -162,7 +163,7 @@
 
                         </header>
                         <section id="main">
-                            保存するKey：<input id="textkey" type="text" /> 保存する値：
+                            保存する職業名：<input id="textkey" type="text" /> 保存する技能：
                             <input id="textdata" type="text" />
                             <button id="button" onclick="setlocalStorage()">保存</button>
                             <button id="button" onclick="removeStorage()">削除</button>
@@ -187,7 +188,7 @@
 
     <!--footer Section -->
     <div class="for-full-back " id="footer">
-        2016 hoge | All Right Reserved
+      2016　クトゥルフwebツール
 
     </div>
     <!--End footer Section -->
