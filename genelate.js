@@ -16,6 +16,9 @@ var syumi_skill_memo = [];
 var syumi_skill_id = [];
 var syumi_huri = [];
 
+var shoki_syumi_p=0;
+
+document.getElementById("syumi_display").style.display="none";
 
 // //毎秒、趣味技能と職業技能の同期処理
 // function douki(){
@@ -50,6 +53,8 @@ function HTML_Load(_html, replace) {
     }
     xmlhttp.send(null);
 }
+
+
 
 // ①Web Storageの実装確認
 if (typeof localStorage === 'undefined') {
@@ -238,7 +243,7 @@ if (typeof localStorage === 'undefined') {
     function syumirec() {
         if (document.getElementById("syumi_P").innerHTML > 0) {
             alert("まだ割り振れる趣味技能ポイントがのこっています。");
-        } else {
+        } else{
             syumi_huri.length = 0;
             syumi_skill_id.length=0;
             syumi_skill_memo.length=0;
@@ -290,15 +295,26 @@ if (typeof localStorage === 'undefined') {
 
 
 
-            //出力ボタンを出す。
+            //ボタンを出す。
             var str = '<input type="button" class= "sample" value="趣味技能入力完了" onclick="syumirec()">';
             document.getElementById("memo").innerHTML = str;
             document.getElementById("preview").innerHTML = "";
 
-            _delete_element('hobby_show');
+            //_delete_element('hobby_show');
             _delete_element('show');
 
         }
+
+        var str="";
+
+        str += "<b>残り趣味技能P" + ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' + '<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>' + '<br>';
+        str += "<b>回避</b>" + '<span id="0">' + DEX * 2 + '</span><br>' + '<input type="range" name="num" id="slide0" min="' + DEX * 2 + '" max = "100" step="1" value="' + DEX * 2 + '"onchange="changeValue(this.value,0)"><br>';
+        str += "<b>母国語</b>" + '<span id="39">' + EDU * 5 + '</span><br>' + '<input type="range" name="num" id="slide39" min="' + EDU * 5 + '" max = "100" step="1" value="' + EDU * 5 + '"onchange="changeValue(this.value,39)"><br>';
+        document.getElementById("preview2").innerHTML = str;
+
+
+        document.getElementById("syumi_display").style.display="inline";
+
 
 
     }
@@ -319,7 +335,7 @@ if (typeof localStorage === 'undefined') {
 
     //職業選択技能を出す
     function show(x) {
-        var shoki_syumi_p = INT * 10;
+        shoki_syumi_p = INT * 10;
 
         pro_skill_id.length = 0;
         //EDU*20の降っていない状態の職業技能P 今は仮に300
@@ -373,17 +389,14 @@ if (typeof localStorage === 'undefined') {
 
 
         //趣味技能を出す
-        HTML_Load('genelate.html', 'top');
-        HTML_Load('./side.html', 'side');
+        // HTML_Load('genelate.html', 'top');
+        // HTML_Load('./side.html', 'side');
 
         str = "";
 
 
 
-        str += "<b>残り趣味技能P" + ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' + '<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>' + '<br>';
-        str += "<b>回避</b>" + '<span id="0">' + DEX * 2 + '</span><br>' + '<input type="range" name="num" id="slide0" min="' + DEX * 2 + '" max = "100" step="1" value="' + DEX * 2 + '"onchange="changeValue(this.value,0)"><br>';
-        str += "<b>母国語</b>" + '<span id="39">' + EDU * 5 + '</span><br>' + '<input type="range" name="num" id="slide39" min="' + EDU * 5 + '" max = "100" step="1" value="' + EDU * 5 + '"onchange="changeValue(this.value,39)"><br>';
-        document.getElementById("preview2").innerHTML = str;
+
 
     }
 
