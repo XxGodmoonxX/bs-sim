@@ -303,17 +303,19 @@ if (typeof localStorage === 'undefined') {
             //_delete_element('hobby_show');
             _delete_element('show');
 
+            var str="";
+
+            str += "<b>残り趣味技能P" + ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' + '<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>' + '<br>';
+            str += "<b>回避</b>" + '<span id="0">' + DEX * 2 + '</span><br>' + '<input type="range" name="num" id="slide0" min="' + DEX * 2 + '" max = "100" step="1" value="' + DEX * 2 + '"onchange="changeValue(this.value,0)"><br>';
+            str += "<b>母国語</b>" + '<span id="39">' + EDU * 5 + '</span><br>' + '<input type="range" name="num" id="slide39" min="' + EDU * 5 + '" max = "100" step="1" value="' + EDU * 5 + '"onchange="changeValue(this.value,39)"><br>';
+            document.getElementById("preview2").innerHTML = str;
+
+
+            document.getElementById("syumi_display").style.display="inline";
+
         }
 
-        var str="";
 
-        str += "<b>残り趣味技能P" + ' <span id="syumi_P">' + shoki_syumi_p + '</span></b>' + '<input type="range" disabled id="S_slide" min="0" max="400" step="1" value=' + shoki_syumi_p + '>' + '<br>';
-        str += "<b>回避</b>" + '<span id="0">' + DEX * 2 + '</span><br>' + '<input type="range" name="num" id="slide0" min="' + DEX * 2 + '" max = "100" step="1" value="' + DEX * 2 + '"onchange="changeValue(this.value,0)"><br>';
-        str += "<b>母国語</b>" + '<span id="39">' + EDU * 5 + '</span><br>' + '<input type="range" name="num" id="slide39" min="' + EDU * 5 + '" max = "100" step="1" value="' + EDU * 5 + '"onchange="changeValue(this.value,39)"><br>';
-        document.getElementById("preview2").innerHTML = str;
-
-
-        document.getElementById("syumi_display").style.display="inline";
 
 
 
