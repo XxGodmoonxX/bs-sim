@@ -215,3 +215,7 @@ nav {
 .blog-p-style p {
     font-size: 16px;
 }
+
+.blog-p-style hr {
+    border-top: 1px solid #bbb;
+}
