@@ -1,3 +1,4 @@
+//コメント
 $(document).ready(function() {
     $('#getbtn').click(function() {
         var url = $('#url').val();

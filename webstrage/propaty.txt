@@ -1,0 +1,23 @@
+それぞれの技能のid
+
+
+preview.js
+
+id は　slide+val で
+
+上から順に
+slide0,slide1..となっている
+
+
+syumi_preview.js
+
+val を preview.js
+との衝突を避けるため
+valを100番から使う
+
+上のはやめ
+
+idを,両者共通でとる。
+
+syumi_preview.jsを機関として
+preview.jsで撮る時に検索をかける。

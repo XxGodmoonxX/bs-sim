@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>キャラクタシート生成君</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Ruluko' rel='stylesheet' type='text/css' />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" type="text/css" href="slide.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./footerFixed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+    <script src="./novus-nvd3-153163a/build/nv.d3.js"></script>
+    <link href="./novus-nvd3-153163a/build/nv.d3.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+</head>
+
+<body onload="viewStorage();">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="./index.html">クトゥルフwebツール</a>
+            </div>
+            <!-- Collect the nav links for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./index.html">HOME</a>
+                    </li>
+                    <li><a href="blog.html">TEXT</a>
+                    </li>
+                    <li><a href="resize.html">RISIZE</a>
+                    </li>
+                    <li><a href="genelate.html">GENERATOR</a>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--End Navigation -->
+
+    <section class="for-full-back color-white " id="contact">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                  <h1>職業技能設定ページ</h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-10 contact-cls">
+                    <h3>説明 </h3>
+                    <b>ルールブックを参照</b>してキー値に職業名</b>
+                    <p>値に技能名を登録してください</p><br>
+                    <p>職業自由選択技能は'趣味'と入力です。</p>
+                    <p>区切り文字は','を使用してください</p><br>
+                    <p>入力したデータはブラウザに保存されます</p>
+                    <h4>例: 拳法家　こぶし（パンチ）,キック,マーシャルアーツ,趣味,趣味</h4>
+                </div>
+                <div class="col-md-12">
+
+                    <div class="page">
+                        <header>
+                            <div id="title">
+                            </div>
+                            <script type="text/javascript">
+                                // ①Web Storageの実装確認
+                                if (typeof localStorage === 'undefined') {
+                                    window.alert("このブラウザはWeb Storage機能が実装されていません");
+                                } else {
+                                    //	window.alert("このブラウザはWeb Storage機能を実装しています");
+
+                                    var storage = localStorage;
+
+                                    // ③localStorageへの格納
+                                    function setlocalStorage() {
+                                        var key = document.getElementById("textkey").value;
+                                        var value = document.getElementById("textdata").value;
+
+                                        // 値の入力チェック
+                                        if (key && value) {
+                                            storage.setItem(key, value);
+                                        }
+
+                                        // 変数の初期化
+                                        key = "";
+                                        value = "";
+
+                                        viewStorage();
+                                    }
+
+                                    // ③localStorageからのデータの取得と表示
+                                    function viewStorage() {
+                                        var list = document.getElementById("list")
+                                        while (list.firstChild) list.removeChild(list.firstChild);
+
+                                        // localStorageすべての情報の取得
+                                        for (var i = 0; i < storage.length; i++) {
+                                            var _key = storage.key(i);
+
+                                            // localStorageのキーと値を表示
+                                            var tr = document.createElement("tr");
+                                            var td1 = document.createElement("td");
+                                            var td2 = document.createElement("td");
+                                            list.appendChild(tr);
+                                            tr.appendChild(td1);
+                                            tr.appendChild(td2);
+                                            td1.innerHTML = _key;
+                                            td2.innerHTML = storage.getItem(_key);
+                                        }
+                                    }
+
+                                    // ④localStorageから削除
+                                    function removeStorage() {
+                                        var key = document.getElementById("textkey").value;
+
+                                        storage.removeItem(key);
+
+                                        // 変数の初期化
+                                        key = "";
+
+                                        viewStorage();
+                                    }
+
+                                    // ⑤localStorageからすべて削除
+                                    function removeallStorage() {
+                                        if (window.confirm("今までの記録を全て削除します。よろしいですか？")) {
+                                            storage.clear();
+                                            viewStorage();
+                                        }
+                                    }
+
+                                }
+                            </script>
+
+                        </header>
+                        <section id="main">
+                            保存する職業名：<input id="textkey" type="text" /> 保存する技能：
+                            <input id="textdata" type="text" />
+                            <button id="button" onclick="setlocalStorage()">保存</button>
+                            <button id="button" onclick="removeStorage()">削除</button>
+                            <button id="button" onclick="removeallStorage()">全て削除</button>
+                            <table border="1">
+                                <tr>
+                                    <th>キー</th>
+                                    <th>値</th>
+                                </tr>
+                                <tbody id="list">
+                                    <a href="./genelate.html">キャラシ生成君</a>                                </tbody>
+                            </table>
+                        </section>
+                        <footer>
+                        </footer>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer Section -->
+    <div class="for-full-back " id="footer">
+      2016　クトゥルフwebツール
+
+    </div>
+    <!--End footer Section -->
+
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="assets/plugins/bootstrap.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    <!-- MY SCRIPTS -->
+    <script src="./genelate.js"></script>
+    <script src="./hash.js"></script>
+
+</body>
+
+</html>

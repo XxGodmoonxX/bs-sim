@@ -1,0 +1,181 @@
+
+<div id="syumi_display">
+    <!-- 折り畳み展開ポインタ -->
+    <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ 戦闘技能</a>
+    </div>
+    <!--// 折り畳み展開ポインタ -->
+
+    <!-- 折り畳まれ部分 -->
+    <div id="open" style="display:none;clear:both;">
+        <!-- <b>回避</b> <span id="0">22</span><br>
+    <input type="range" name="num" id="slide0" min='22' max="100" step="1" value='22' onchange="changeValue(this.value,0)"> -->
+        <b>キック</b> <span id="1">25</span><br>
+        <input type="range" name="num" id="slide1" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,1)">
+        <b>組み付き<b> <span id="2">25</span><br>
+    <input type="range" name="num" id="slide2" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,2)">
+    <b>こぶし(パンチ)</b> <span id="3">50</span><br>
+        <input type="range" name="num" id="slide3" min='50' max="100" step="1" value='50' onchange="changeValue(this.value,3)">
+        <b>頭突き</b> <span id="4">10</span><br>
+        <input type="range" name="num" id="slide4" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,4)">
+        <b>投擲</b> <span id="5">25</span><br>
+        <input type="range" name="num" id="slide5" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,5)">
+        <b>マーシャルアーツ</b> <span id="6">1</span><br>
+        <input type="range" name="num" id="slide6" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,6)">
+        <b>拳銃</b> <span id="7">20</span><br>
+        <input type="range" name="num" id="slide7" min='20' max="100" step="1" value='20' onchange="changeValue(this.value,7)">
+        <b>サブマシンガン</b> <span id="8">15</span><br>
+        <input type="range" name="num" id="slide8" min='15' max="100" step="1" value='15' onchange="changeValue(this.value,8)">
+        <b>ショットガン</b> <span id="9">30</span><br>
+        <input type="range" name="num" id="slide9" min='30' max="100" step="1" value='30' onchange="changeValue(this.value,9)">
+        <b>マシンガン</b> <span id="10">15</span><br>
+        <input type="range" name="num" id="slide10" min='15' max="100" step="1" value='15' onchange="changeValue(this.value,10)">
+        <b>ライフル</b> <span id="11">25</span><br>
+        <input type="range" name="num" id="slide11" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,11)">
+    </div>
+    <!--// 折り畳まれ部分 -->
+
+
+    <!-- 折り畳み展開ポインタ -->
+    <div onclick="obj=document.getElementById('open2').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ 探索技能</a>
+    </div>
+    <!--// 折り畳み展開ポインタ -->
+
+    <!-- 折り畳まれ部分 -->
+    <div id="open2" style="display:none;clear:both;">
+        <b>応急手当</b> <span id="12">30</span><br>
+        <input type="range" name="num" id="slide12" min='30' max="100" step="1" value='30' onchange="changeValue(this.value,12)">
+        <b>鍵開け</b> <span id="13">1</span><br>
+        <input type="range" name="num" id="slide13" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,13)">
+        <b>隠す</b> <span id="14">15</span><br>
+        <input type="range" name="num" id="slide14" min='15' max="100" step="1" value='15' onchange="changeValue(this.value,14)">
+        <b>隠れる</b> <span id="15">10</span><br>
+        <input type="range" name="num" id="slide15" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,15)">
+        <b>聞き耳</b> <span id="16">25</span><br>
+        <input type="range" name="num" id="slide16" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,16)">
+        <b>忍び歩き</b> <span id="17">10</span><br>
+        <input type="range" name="num" id="slide17" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,17)">
+        <b>写真術</b> <span id="18">10</span><br>
+        <input type="range" name="num" id="slide18" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,18)">
+        <b>精神分析</b> <span id="19">1</span><br>
+        <input type="range" name="num" id="slide19" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,19)">
+        <b>追跡</b> <span id="20">10</span><br>
+        <input type="range" name="num" id="slide20" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,20)">
+        <b>登攀</b> <span id="21">40</span><br>
+        <input type="range" name="num" id="slide21" min='40' max="100" step="1" value='40' onchange="changeValue(this.value,21)">
+        <b> 図書館</b> <span id="22">25</span><br>
+        <input type="range" name="num" id="slide22" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,22)">
+        <b>目星</b> <span id="23">25</span><br>
+        <input type="range" name="num" id="slide23" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,23)">
+
+    </div>
+    <!--// 折り畳まれ部分 -->
+
+    <!-- 折り畳み展開ポインタ -->
+    <div onclick="obj=document.getElementById('open3').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ 行動技能</a>
+    </div>
+    <!--// 折り畳み展開ポインタ -->
+
+    <!-- 折り畳まれ部分 -->
+    <div id="open3" style="display:none;clear:both;">
+        <b>運転</b> <span id="24">20</span><br>
+        <input type="range" name="num" id="slide24" min='20' max="100" step="1" value='20' onchange="changeValue(this.value,24)">
+        <b>機械修理</b> <span id="25">20</span><br>
+        <input type="range" name="num" id="slide25" min='20' max="100" step="1" value='20' onchange="changeValue(this.value,25)">
+        <b>重機械操作</b> <span id="26">1</span><br>
+        <input type="range" name="num" id="slide26" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,26)">
+        <b>乗馬</b> <span id="27">5</span><br>
+        <input type="range" name="num" id="slide27" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,27)">
+        <b>水泳</b> <span id="28">25</span><br>
+        <input type="range" name="num" id="slide28" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,28)">
+        <b>製作</b> <span id="29">5</span><br>
+        <input type="range" name="num" id="slide29" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,29)">
+        <b>操縦</b> <span id="30">1</span><br>
+        <input type="range" name="num" id="slide30" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,30)">
+        <b>跳躍</b> <span id="31">25</span><br>
+        <input type="range" name="num" id="slide31" min='25' max="100" step="1" value='25' onchange="changeValue(this.value,31)">
+        <b>電気修理</b> <span id="32">10</span><br>
+        <input type="range" name="num" id="slide32" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,32)">
+        <b> ナビゲート</b> <span id="33">10</span><br>
+        <input type="range" name="num" id="slide33" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,33)">
+        <b>変装</b> <span id="34">1</span><br>
+        <input type="range" name="num" id="slide34" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,34)">
+
+    </div>
+    <!--// 折り畳まれ部分 -->
+
+    <!-- 折り畳み展開ポインタ -->
+    <div onclick="obj=document.getElementById('open4').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ 交渉技能</a>
+    </div>
+    <!--// 折り畳み展開ポインタ -->
+
+    <!-- 折り畳まれ部分 -->
+    <div id="open4" style="display:none;clear:both;">
+
+        <b>言いくるめ</b> <span id="35">5</span><br>
+        <input type="range" name="num" id="slide35" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,35)">
+        <b>信用</b> <span id="36">15</span><br>
+        <input type="range" name="num" id="slide36" min='15' max="100" step="1" value='15' onchange="changeValue(this.value,36)">
+        <b>説得</b> <span id="37">15</span><br>
+        <input type="range" name="num" id="slide37" min='15' max="100" step="1" value='15' onchange="changeValue(this.value,37)">
+        <b> 値切り</b> <span id="38">5</span><br>
+        <input type="range" name="num" id="slide38" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,38)">
+        <b> ほかの言語</b> <span id="40">1</span><br>
+        <input type="range" name="num" id="slide40" min='20' max="100" step="1" value='20' onchange="changeValue(this.value,40)">
+    </div>
+    <!--// 折り畳まれ部分 -->
+
+    <!-- 折り畳み展開ポインタ -->
+    <div onclick="obj=document.getElementById('open5').style; obj.display=(obj.display=='none')?'block':'none';">
+        <a style="cursor:pointer;">▼ 知識技能</a>
+    </div>
+    <!--// 折り畳み展開ポインタ -->
+
+    <!-- 折り畳まれ部分 -->
+    <div id="open5" style="display:none;clear:both;">
+
+        <b>医学</b> <span id="41">5</span><br>
+        <input type="range" name="num" id="slide41" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,41)">
+        <b>オカルト</b> <span id="42">5</span><br>
+        <input type="range" name="num" id="slide42" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,42)">
+        <b>化学</b> <span id="43">1</span><br>
+        <input type="range" name="num" id="slide43" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,43)">
+        <b>クトゥルフ神話</b> <span id="44">0</span><br>
+        <input type="range" name="num" id="slide44" min='0' max="100" step="1" value='0' onchange="changeValue(this.value,44)">
+        <b>芸術</b> <span id="45">5</span><br>
+        <input type="range" name="num" id="slide45" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,45)">
+        <b>経理</b> <span id="46">10</span><br>
+        <input type="range" name="num" id="slide46" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,46)">
+        <b>考古学</b> <span id="47">1</span><br>
+        <input type="range" name="num" id="slide47" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,47)">
+        <b>コンピュータ</b> <span id="48">1</span><br>
+        <input type="range" name="num" id="slide48" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,48)">
+        <b>心理学</b> <span id="49">5</span><br>
+        <input type="range" name="num" id="slide49" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,49)">
+        <b>人類学 </b> <span id="50">1</span><br>
+        <input type="range" name="num" id="slide50" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,50)">
+        <b>生物学</b> <span id="51">1</span><br>
+        <input type="range" name="num" id="slide51" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,51)">
+        <b>地質学</b> <span id="52">1</span><br>
+        <input type="range" name="num" id="slide52" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,52)">
+        <b>電子工学</b> <span id="53">1</span><br>
+        <input type="range" name="num" id="slide53" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,53)">
+        <b>天文学</b> <span id="54">1</span><br>
+        <input type="range" name="num" id="slide54" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,54)">
+        <b> 博物学</b> <span id="55">10</span><br>
+        <input type="range" name="num" id="slide55" min='10' max="100" step="1" value='10' onchange="changeValue(this.value,55)">
+        <b>物理学</b> <span id="56">1</span><br>
+        <input type="range" name="num" id="slide56" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,56)">
+        <b>法律</b> <span id="57">5</span><br>
+        <input type="range" name="num" id="slide57" min='5' max="100" step="1" value='5' onchange="changeValue(this.value,57)">
+        <b>薬学</b> <span id="58">1</span><br>
+        <input type="range" name="num" id="slide58" min='1' max="100" step="1" value='1' onchange="changeValue(this.value,58)">
+        <b>歴史</b> <span id="59">20</span><br>
+        <input type="range" name="num" id="slide59" min='20' max="100" step="1" value='20' onchange="changeValue(this.value,59)">
+
+    </div>
+    <!--// 折り畳まれ部分 -->
+</div>
