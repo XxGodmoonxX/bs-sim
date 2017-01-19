@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -51,16 +52,14 @@
             <!-- Collect the nav links for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./index.html">HOME</a>
-                    </li>
-                    <li><a href="blog.html">TEXT</a>
-                    </li>
-                    <li><a href="resize.html">RISIZE</a>
-                    </li>
-                    <li><a href="genelate.html">GENERATOR</a>
-                    </li>
-                    <li><a href="contact.html">CONTACT</a>
-                    </li>
+                  <li><a href="./index.html">HOME</a>
+                  </li>
+                  <li><a href="resize.html">RISIZE</a>
+                  </li>
+                  <li><a href="genelate.html">GENERATOR</a>
+                  </li>
+                  <li><a href="simulate.html">SIMULATER</a>
+                  </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -72,78 +71,71 @@
 
     <section class="for-full-back color-white " id="contact">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1>TRPGってなんだ!?</h1>
-
-                </div>
-
-            </div>
-
-
             <div class="row">
-                <div class="col-md-7 col-md-offset-1">
-                    <div class="well">
-                        <b>目次</b><br>
-                        <a href="#sec1">TRPGとは</a><br>
-                        <a href="#sec2">クトゥルフ神話とは</a><br>
-                        <a href="#sec3">TRPGを始める準備</a><br>
+                <div class="col-xs-2 col-md-2 col-sm-2">
+                  <br>
+                    <h3><目次> </h3>
+                    <div>
+                        <li>
+                            <a href="blog.html">戦闘しみゅについて</a>
+                        </li>
+                        <li>
+                            <a href="howto.html">戦闘しみゅ使い方</a>
+                        </li>
                     </div>
-
-
                 </div>
-            </div>
-            <div class="row blog-p-style" >
-                <div class="col-md-7 col-md-offset-1">
+                <div class="col-xs-10 col-md-10 col-sm-10">
+                    <h1>戦闘しみゅについて</h1>
+                    <p>クトゥルフTRPGの戦闘は卓によって細かいルールは異なると思います。 そのため、本記事では、しみゅでのデフォルトの実装仕様について説明したいと思います。今後の更新で、こういったルールを追加してほしい！こんなバグがあったぞ！等ございましたら。<a href="contact.html">contact</a>より、ご一報くだされば幸いです。
+                    </p>
+                    <ul>
+                        <li>スペシャル、クリティカル、ファンブルの戦闘時の不採用。<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>卓のハウスルールによってまちまちであるため、現在は実装されていません。</span></span></span></div></pre></li>
+                    </ul>
+                    <ul>
+                        <li>応急手当、医学の戦闘時の扱いを同じに</li>
+                        <li>モンスターの攻撃対象は生存探索者（気絶含む）をランダム選択</li>
+                        <li>探索者の攻撃対象は、番号の若いモンスターから。</li>
+                        <li>応医は対象探索者が受けた攻撃の回数だけ挑戦可能</li>
+                        <li>組み合わせロール時、マーシャルアーツのみ成功の場合攻撃は失敗。攻撃ロールが成功の場合はその攻撃ロールでのダメージ。</li>
+                        <li>探索者の残り耐久力が2以下の場合自動気絶</li>
+                        <li>自動気絶の時に応医で耐久力3以上まで回復すれば行動可能。</li>
+                        <li>探索者が現在の体力の半分以上を失った場合CONx5のショックロールに耐えられなければ気絶</li>
+                        <li>探索者の耐久力が0になった場合、次Rまでに1以上にならなければ死亡</li>
+                        <li>探索者の攻撃手段のダメージは以下のとおり</li>
+                    </ul>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>パンチ</th>
+                            <th>キック</th>
+                            <th>頭突き</th>
+                            <th>MA+パンチ</th>
+                            <th>MA+キック</th>
+                            <th>MA+頭突き</th>
+                        </tr>
 
-                    <div id="sec1">
-                        <br>
-                        <br>
-                        <h2><!-- <span style="border-bottom: solid 1px black;"> -->1.TRPGとは<!-- </span> --><hr></h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YKOy8JZRFnI" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <h3>基本は会話を楽しむゲーム</h3>
-                    <p>皆さんはRPGと聞いて、どのようなものを想像しますか？
-                    TRPGという言葉に馴染みのない多くの人は、ファイナルファンタジーやドラゴンクエストのようなゲームを想像するのではないかと思います。しかし、TRPGはこう言ったコンピューターゲームとは異なり、コンピューターが必要なく、決められたストーリーもありません。</p>
-                    <p>TRPGには世界観やシナリオが記されたルールブックがあるだけで、このルールブックを元にゲームが進んでいきます。各プレイヤーは、会話のみでルールブックに記された世界観を共有。TRPGとは、<font color="#ff0000">その共有された架空の世界で自分の代理となるキャラクターを操り、各プレイヤーが協力して目的を達成するまでを楽しむ遊び</font>です。</p>
-                    <h3>TRPGの魅力</h3>
-                    <p>行動がある程度決まっているコンピューターゲームと異なり、プレイヤーの<font color="#ff0000">想像力次第で無限に行動パターンがある点こそ、TRPG最大の魅力</font>と言えるかもしれません。</p>
+                        <tr>
+                            <td style="text-align:left">1d3+db</td>
+                            <td style="text-align:left">1d6+db</td>
+                            <td style="text-align:left">1d4+db</td>
+                            <td style="text-align:left">2d3+db</td>
+                            <td>2d6+db</td>
+                            <td>2d4+db</td>
+                        </tr>
 
-                    <div id="sec2">
-                        <br>
-                        <br>
-                        <h2><!-- <span style="border-bottom: solid 1px black;"> -->クトゥルフ神話とは<!-- </span> --><hr></h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/aB39OqlJsm4" frameborder="0" allowfullscreen></iframe> </div>
-                        <h3>「クトゥルフの神話」と「クトゥルフ呼び声」</h3>
-                    <p>代表的なTRPGの一つに「クトゥルフの呼び声」と呼ばれるものがあります。この元となった物語が「クトゥルフ神話」です。つまり、「クトゥルフの呼び声」は「クトゥルフ神話」の世界観で行うTRPGということになります。</p>
-                    <div id="sec3">
-                        <br>
-                        <br>
-                        <h2><!-- <span style="border-bottom: solid 1px bla
-                            ck;"> -->3.TRPGってこんな感じ<!-- </span> --><hr></h2>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TTNUJN9Vvf4" frameborder="0" allowfullscreen></iframe> </div>
-                        <h3>プレイヤー同士は仲間</h3>
-                    <p>ここまで読んでも全然想像できないと思うので、まずは遊び方の概略をお話しします。</p>
-                    <p>TRPGを行う時は、プレイヤー同士が対面して遊ぶ事になります。ここは、ボードゲームやカードゲームと一緒。ただし、プレイヤー同士は敵ではなく仲間となります。</p>
-                    <h3>TRPGに最適な人数は？</h3>
-                    <p>プレイヤーの数は、基本的に<font color="#ff0000">2~4人がベスト</font>。これはTRPGの種類にもよりますが、多くはこの人数でバランス良く遊ぶことができます。</p>
-                    <h3>欠かせないゲームマスター</h3>
-                    <p>TRPGを行うには、プレイヤーの他にゲームを仕切る人物が必要になります。それが「ゲームマスター」です。ゲームマスターは、ルールブックを元にゲームを進行します。基本的にはプレイヤー(以下 PL)が起こした行動に対して、ゲームマスターがその結果を伝えていくことになります。シナリオの大筋以外はゲームマスターの裁量によって決まるため、TRPGを行うにあたって<font color="#ff0000">最も重要な役割</font>だと言えます。ゲームマスター(以下GM)は、ルールブックを熟知している必要があるのです。</p>
-                    <p>ここまででTRPGの遊び方の概略を伝えてきましたが、具体的には、</p>
-                    <div class="well">
-                        <p>GM「あなたたちがいる部屋には怪しい扉と普通の扉の二つがあります。」</p>
-                        <p>PL A「どうしよう。どっちか開けてみる？」</p>
-                        <p>PL B「そうだね。どっちの扉を誰が開けようかな。」</p>
-                        <p>PL A「私が怪しい扉を開けてみる！」</p>
-                        <p>ゲームマスター「では、Aが扉を開けるとそこには〜」</p></div>
-                    <p>といった形でゲームが進んでいきます。プレイヤーの行動に対し、ゲームマスターが結果を与える。これを繰り返すことによって、プレイヤーはそのシナリオの目的達成を目指すのです。</p>
+
+                    </table>
+                    <ul>
+                        <li>モンスターのステータスは基本ルールブックの平均値から引用</li>
+                        <li>DEX順でモンスターと同じだった場合探索者が先に行動</li>
+                        <li>回避に挑戦できるのは各探索者、モンスターともに1Rにつき一回まで</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
     <!--footer Section -->
     <div class="for-full-back " id="footer">
-        2016　クトゥルフwebツール
+        2016 hoge | All Right Reserved
 
     </div>
     <!--End footer Section -->
